@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <!-- Embed Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Carattere&family=Playball&family=Anton&family=Sofia&family=Montserrat:wght@400;500;600&family=Be+Vietnam+Pro:wght@300;400;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Preconnect Link Icon-->
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+        <!-- Embed Icon -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
+        <!-- Embed highlight code -->
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-okaidia.min.css"
+        />
+        <!-- Styles Css -->
+        <link rel="stylesheet" href="assets/css/reset.css" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+    </head>
+    <body>
+        <div class="frame-19">
+            <h2>Flexbox</h2>
+            <p>
+                Flexbox gồm 2 thành phần chính:
+                <strong>flex container</strong> và <strong>flex item</strong>.
+                Flex container là thẻ cha, bên trong sẽ có một hoặc nhiều thẻ
+                con, được gọi là flex item.
+            </p>
+            <p>
+                <note-1>Lưu ý: </note-1>flex item phải là thẻ con trực tiếp của
+                thẻ cha (flex container) bạn nhé.
+            </p>
+            <!-- Flex-container -->
+            <h3>Flex-container</h3>
+            <!-- justify-content -->
+            <h4>justify-content => main axis</h4>
+            <note-1>Căn chỉnh hàng</note-1>
+            <note-2
+                >Property Value: flex-start, flex-end, center, space-between,
+                space-aroud, space-evenly
+            </note-2>
+            <example
+                >Example: justify-content: space-evenly; và padding:
+                20px;</example
+            >
+            <div class="container">
+                <div class="item">item 1</div>
+                <div class="item">item 2</div>
+                <div class="item">item 3</div>
+            </div>
+            <!-- align-items -->
+            <h4>align-items => cros axis</h4>
+            <note-1
+                >Căn chỉnh Cột khi chỉ có 1 dòng, thuộc tính mặc định flex-warp:
+                nowarp</note-1
+            >
+            <note-2
+                >Property Values: stretch, center, flext-start, flex-end,
+                baseline</note-2
+            >
+            <example>Example: align-items: flex-end;</example>
+            <div class="align-items">
+                <div class="item">Lorem ipsum dolor sit amet.</div>
+                <div class="item">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </div>
+                <div class="item">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Harum reprehenderit nam iure laudantium quis temporibus?
+                </div>
+            </div>
+            <h4>align-content => cross axis</h4>
+            <note-1
+                >Căn chỉnh Cột nhưng trong trường hợp có 2 hàng trở lên, khi ta
+                khai báo flex-warp: warp</note-1
+            >
+            <note-2
+                >Property Values: stretch, center, flex-start, flex-end,
+                space-between, space-around, space-evenly</note-2
+            >
+            <example
+                >Example: align-content: space-evenly; flex-warp: warp;</example
+            >
+            <div class="align-content">
+                <div class="item">text 1</div>
+                <div class="item">text 2</div>
+                <div class="item">text 3</div>
+                <div class="item">text 4</div>
+                <div class="item">text 5</div>
+                <div class="item">text 6</div>
+                <div class="item">text 7</div>
+                <div class="item">text 8</div>
+                <div class="item">text 9</div>
+            </div>
+
+            <!-- flex-direction -->
+            <h4>flex-direction</h4>
+            <note-1>Chỉ định Hướng của flexbox</note-1>
+            <note-2
+                >Property Value: row, row-reverse, column,
+                column-reverse</note-2
+            >
+            <!-- flex-wrap -->
+            <h4>flex-wrap</h4>
+            <note-1
+                >Dùng để cho các item xuống dòng khi ta đặt kích thước width vào
+                class item</note-1
+            >
+            <note-2>Property Value: nowarp, warp, warp-reverse</note-2>
+            <example>Example: flex-wrap: wrap;</example>
+            <div class="flex-wrap">
+                <div class="item">text 1</div>
+                <div class="item">text 2</div>
+                <div class="item">text 3</div>
+                <div class="item">text 4</div>
+                <div class="item">text 5</div>
+                <div class="item">text 6</div>
+            </div>
+            <h4>flex-flow</h4>
+
+            <h3>Flex-item</h3>
+            <!-- align-self -->
+            <h4>align-self</h4>
+            <note-1
+                >Giống với align-items chỉ khác chỗ viết code là ở các flex
+                items</note-1
+            >
+            <note-2
+                >Property Value: auto, stretch, center, flex-start, flex-end,
+                baseline</note-2
+            >
+            <example>Example: .item:nth-child(3) {align-self: center;}</example>
+            <div class="align-self">
+                <div class="item">text 1</div>
+                <div class="item">text 2</div>
+                <div class="item">text 3</div>
+                <div class="item">text 4</div>
+                <div class="item">text 5</div>
+                <div class="item">text 6</div>
+            </div>
+            <!--  -->
+            <h4>flex-grow</h4>
+            <note-1
+                >Định lại kích thước width của các item trong flexbox</note-1
+            >
+            <note-2
+                >Property Value:
+                <ul>
+                    <li>
+                        flex-grow: 0 - giá trị mặc định => width sẽ bằng chiều
+                        dài nội dung của item đó
+                    </li>
+                    <li>
+                        flex-grow: 1 - number => vùng chứa các flex-item sẽ tràn
+                        ra sao cho phủ đầy width của flex-container
+                    </li>
+                    <li>
+                        flex-grow: 2 - number => vùng chứa sẽ to gấp 2 lần so
+                        với các vùng chứa khác.
+                    </li>
+                </ul>
+            </note-2>
+
+            <example>
+                Example 1: tuỳ chỉnh vùng chứa text 2 với width gấp 3 lần các
+                vùng chứa khác
+                <ul>
+                    <li>
+                        .item:nth-child(1), .item:nth-child(3) { flex-grow: 1;}
+                    </li>
+                    <li>.item:nth-child(2) { flex-grow: 3;}</li>
+                </ul>
+            </example>
+            <div class="flex-grow">
+                <div class="item" style="background: red">text 1</div>
+                <div class="item" style="background: #1284db">text 2</div>
+                <div class="item" style="background: #17e387">text 3</div>
+            </div>
+            <example
+                >Example 2: tuỳ chỉnh vùng chứa text 2 gấp 2 lần vùng chứa text
+                1, text 3 bằng chiều dài nội dung của nó.
+                <ul>
+                    <li>.item:nth-child(1) {flex-grow:1;}</li>
+                    <li>.item:nth-child(2) {flex-grow:2;}</li>
+                    <li>.item:nth-child(3) {flex-grow:0;}</li>
+                </ul>
+            </example>
+            <div class="flex-grow-2">
+                <div class="item" style="background: red">text 1</div>
+                <div class="item" style="background: #1284db">text 2</div>
+                <div class="item" style="background: #17e387">text 3</div>
+            </div>
+            <!-- flex-shrink -->
+            <h4>flex-shrink</h4>
+            <note-1
+                >Kiểm soát sự co lại của các item khi có nhiều flex item trong
+                flex container</note-1
+            >
+            <note-2
+                >Property Value: <br />
+                <ul>
+                    <li>
+                        flex-shrink: 0 - numbers => vùng chứa sẽ không bị Co
+                        lại, giữ nguyên độ rộng ban đầu của flex-item
+                    </li>
+                    <li>
+                        flex-shrink: 1 - giá trị mặc định => vùng chứa sẽ bị Co
+                        lại, đều như nhau
+                    </li>
+                    <li>
+                        flex-shrink: 2 - numbers => vùng chứa sẽ bị Co lại, co
+                        gấp 2 lần so với các vùng khác
+                    </li>
+                    <li>
+                        flex-shrink: 3 - number => vùng chứa sẽ bị Co lại, co
+                        gấp 3 lần so với các vùng khác
+                    </li>
+                </ul>
+            </note-2>
+
+            <example
+                >Example: ban đầu ta cho các item có width: 20%; giá trị mặc
+                định flex-shrink; 1</example
+            >
+            <div class="flex-shrink-begin">
+                <div class="item">text 1</div>
+                <div class="item">text 2</div>
+                <div class="item">text 3</div>
+                <div class="item">text 4</div>
+            </div>
+            <example>
+                Khi ta thêm nhiều item vào trong container và ta để mặc định giá
+                trị flex-warp: nowarp => nó sẽ không xuống hàng<br />
+                Vì không xuống hàng nên nó sẽ thu nhỏ vùng chứa (width) lại, sao
+                cho các flex item đều nằm trên 1 hàng<br />
+                lúc này ta có thể tuỳ chỉnh 1 vùng chứa nào đó có sức chứa nhỏ
+                hơn các vùng chứa khác, hoặc rộng hơn,... <br />
+                Ta làm như sau: <br />
+                .item:nth-child(3) { flex-shrink: 0;} <br
+            /></example>
+            <div class="flex-shrink">
+                <div class="item">text 1</div>
+                <div class="item">text 2</div>
+                <div class="item">text 3</div>
+                <div class="item">text 4</div>
+                <div class="item">text 5</div>
+                <div class="item">text 6</div>
+                <div class="item">text 7</div>
+                <div class="item">text 8</div>
+            </div>
+            <p>
+                <strong>Result: </strong> vùng chứa text 3 có độ rộng width: 20%
+                = giá trị khai báo item ban đầu <br />
+                => Làm như thế này để các flex-item không bị bóp méo không gian
+                chứa(width), nó sẽ vẫn giữ được giá trị khai báo ban đầu
+            </p>
+
+            <!-- flex-basis -->
+            <h4>flex-basis</h4>
+            <note-1>Thuộc tính chỉ định độ dài ban đầu của flex item</note-1>
+            <note-2
+                >Property Value:
+                <ul>
+                    <li>auto: mặc định: -> width = chính chiều dài chứa nó.</li>
+                    <li>
+                        number: đơn vị độ dài hoặc % -> chỉ định độ dài ban đầu
+                        của flex item
+                    </li>
+                </ul>
+            </note-2>
+            <example
+                >Example:
+                <ul>
+                    <li>
+                        .item { flex-basis: 30%} -> khai báo width ban đầu cho
+                        flex-item
+                    </li>
+                    <li>
+                        .item { flex-shrink: 0;} -> vùng chứa sẽ không bị co lại
+                        khi có thêm nhiều flex-item
+                    </li>
+                    <li>
+                        .item { flex-grow: 1;} -> vùng chứa các flex-item sẽ
+                        tràn ra sao cho phủ đầy width của flex-container
+                    </li>
+                    <li>
+                        .item:nth-child(2) { flex-basis: 100px} -> tuỳ chỉnh
+                        vùng chứa text 2 với width=100px
+                    </li>
+                </ul>
+            </example>
+            <div class="flex-basis">
+                <div class="item">text 1</div>
+                <div class="item">text 2</div>
+                <div class="item">text 3</div>
+                <div class="item">text 4</div>
+                <div class="item">text 5</div>
+            </div>
+
+            <!-- order -->
+            <h4>order</h4>
+            <note-1
+                >Thay đổi thứ tự hiển thị của flex-item, được dùng nhiều trong
+                giao diện mobile</note-1
+            >
+            <example
+                >Example: chỉnh vùng chứa text 3 sang vùng thứ 2, và vùng chứa
+                text 2 chuyển sang vùng thứ 3</example
+            >
+            <div class="order">
+                <div class="item">text 1</div>
+                <div class="item">text 2</div>
+                <div class="item">text 3</div>
+            </div>
+            <!-- flex -->
+            <h4>flex</h4>
+            <note-1
+                >Shorthand của:
+                <ul>
+                    <li>flex-grow</li>
+                    <li>flex-shrink</li>
+                    <li>flex-basis</li>
+                </ul>
+            </note-1>
+            <note-2>
+                Syntax:
+                <ul>
+                    <li>flex: flex-grow flex-shrink flex-basis</li>
+                    <li>flex: 0 1 auto: giá trị mặc định</li>
+                </ul>
+            </note-2>
+            <note
+                >Lưu ý: thêm CSS Vendor Prefixes
+                <a href="https://autoprefixer.github.io/"
+                    >Link Css Vendor Prefixes</a
+                ></note
+            >
+            <example>Example: </example>
+            <pre><code class="language-css">
+                .item { 
+                    -webkit-box-flex: 0; 
+                    -ms-flex: 0 1 auto;
+                     flex: 0 1 auto;
+                }
+            </code></pre>
+        </div>
+        <!-- CDN Prism: highlight code -->
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    </body>
+</html>
